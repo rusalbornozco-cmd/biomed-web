@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BioMed Equip | Equipos Biomédicos y Monitores Médicos</title>
+  <meta name="description" content="Venta de monitores de signos vitales, equipos de imagen, electrocardiógrafos y equipos biomédicos de alta calidad para hospitales y clínicas.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            medical: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    html { scroll-behavior: smooth; }
+    .product-card:hover { transform: translateY(-4px); }
+    .product-card { transition: all 0.3s ease; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-16">
+        <!-- Logo -->
+        <div class="flex items-center gap-2">
+          <div class="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
+            <i class="fas fa-heartbeat text-white text-xl"></i>
+          </div>
+          <div>
+            <span class="text-xl font-bold text-primary-800">BioMed</span>
+            <span class="text-xl font-light text-medical-600">Equip</span>
+          </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+          <a href="#inicio" class="text-gray-700 hover:text-primary-600 font-medium">Inicio</a>
+          <a href="#productos" class="text-gray-700 hover:text-primary-600 font-medium">Productos</a>
+          <a href="#categorias" class="text-gray-700 hover:text-primary-600 font-medium">Categorías</a>
+          <a href="#nosotros" class="text-gray-700 hover:text-primary-600 font-medium">Nosotros</a>
+          <a href="#contacto" class="bg-primary-600 text-white px-5 py-2 rounded-lg hover:bg-primary-700 transition font-medium">
+            Contacto
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="px-4 py-3 space-y-3">
+        <a href="#inicio" class="block text-gray-700 hover:text-primary-600 font-medium">Inicio</a>
+        <a href="#productos" class="block text-gray-700 hover:text-primary-600 font-medium">Productos</a>
+        <a href="#categorias" class="block text-gray-700 hover:text-primary-600 font-medium">Categorías</a>
+        <a href="#nosotros" class="block text-gray-700 hover:text-primary-600 font-medium">Nosotros</a>
+        <a href="#contacto" class="block bg-primary-600 text-white px-4 py-2 rounded-lg text-center font-medium">Contacto</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="inicio" class="bg-gradient-to-br from-primary-800 via-primary-700 to-primary-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-block bg-medical-500/20 text-medical-100 text-sm font-semibold px-4 py-1 rounded-full mb-4">
+            Equipos Biomédicos de Confianza
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Tecnología médica de alta precisión para tu institución
+          </h1>
+          <p class="text-lg text-primary-100 mb-8 max-w-xl">
+            Monitores de signos vitales, equipos de imagen, electrocardiógrafos y más. Soluciones confiables para hospitales, clínicas y centros de diagnóstico.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="#productos" class="bg-white text-primary-800 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 transition shadow-lg">
+              Ver Catálogo
+            </a>
+            <a href="#contacto" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition">
+              Solicitar Cotización
+            </a>
+          </div>
+        </div>
+        <div class="hidden lg:flex justify-center">
+          <div class="relative">
+            <div class="w-80 h-80 bg-white/10 rounded-full absolute -top-8 -left-8"></div>
+            <div class="w-72 h-72 bg-medical-500/20 rounded-2xl flex items-center justify-center relative z-10 border border-white/20">
+              <i class="fas fa-notes-medical text-8xl text-white/80"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust badges -->
+  <section class="bg-white border-b">
+    <div class="max-w-7xl mx-auto px-4 py-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="flex flex-col items-center gap-2">
+          <i class="fas fa-certificate text-3xl text-primary-600"></i>
+          <span class="font-semibold text-gray-800">Certificados</span>
+          <span class="text-sm text-gray-500">ISO y normas médicas</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fas fa-truck text-3xl text-primary-600"></i>
+          <span class="font-semibold text-gray-800">Envío Nacional</span>
+          <span class="text-sm text-gray-500">Entrega rápida y segura</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fas fa-headset text-3xl text-primary-600"></i>
+          <span class="font-semibold text-gray-800">Soporte Técnico</span>
+          <span class="text-sm text-gray-500">Asesoría especializada</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <i class="fas fa-shield-alt text-3xl text-primary-600"></i>
+          <span class="font-semibold text-gray-800">Garantía</span>
+          <span class="text-sm text-gray-500">Hasta 2 años</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section id="categorias" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900 mb-3">Categorías de Equipos</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Encuentra el equipo biomédico que necesitas para tu institución de salud</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <button onclick="filterProducts('monitores')" class="category-btn bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+          <div class="w-14 h-14 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary-600 transition">
+            <i class="fas fa-desktop text-2xl text-primary-600 group-hover:text-white"></i>
+          </div>
+          <span class="font-semibold text-gray-800 text-sm">Monitores</span>
+        </button>
+
+        <button onclick="filterProducts('imagen')" class="category-btn bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+          <div class="w-14 h-14 bg-medical-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-medical-600 transition">
+            <i class="fas fa-x-ray text-2xl text-medical-600 group-hover:text-white"></i>
+          </div>
+          <span class="font-semibold text-gray-800 text-sm">Equipos de Imagen</span>
+        </button>
+
+        <button onclick="filterProducts('diagnostico')" class="category-btn bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+          <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-blue-600 transition">
+            <i class="fas fa-stethoscope text-2xl text-blue-600 group-hover:text-white"></i>
+          </div>
+          <span class="font-semibold text-gray-800 text-sm">Diagnóstico</span>
+        </button>
+
+        <button onclick="filterProducts('soporte')" class="category-btn bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+          <div class="w-14 h-14 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-red-600 transition">
+            <i class="fas fa-lungs text-2xl text-red-600 group-hover:text-white"></i>
+          </div>
+          <span class="font-semibold text-gray-800 text-sm">Soporte Vital</span>
+        </button>
+
+        <button onclick="filterProducts('quirurgico')" class="category-btn bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+          <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-purple-600 transition">
+            <i class="fas fa-syringe text-2xl text-purple-600 group-hover:text-white"></i>
+          </div>
+          <span class="font-semibold text-gray-800 text-sm">Quirúrgico</span>
+        </button>
+
+        <button onclick="filterProducts('todos')" class="category-btn bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border border-gray-100 text-center group">
+          <div class="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-gray-600 transition">
+            <i class="fas fa-th text-2xl text-gray-600 group-hover:text-white"></i>
+          </div>
+          <span class="font-semibold text-gray-800 text-sm">Ver Todos</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section id="productos" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-10 gap-4">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-2">Nuestros Equipos</h2>
+          <p class="text-gray-600">Equipos biomédicos de alta calidad listos para cotizar</p>
+        </div>
+        <div class="relative w-full sm:w-72">
+          <input type="text" id="search-input" placeholder="Buscar equipo..." 
+                 class="w-full pl-10 pr-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none"
+                 oninput="searchProducts()">
+          <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+        </div>
+      </div>
+
+      <div id="products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- Products will be rendered by JS -->
+      </div>
+
+      <p id="no-results" class="hidden text-center text-gray-500 py-12 text-lg">
+        No se encontraron productos con esos criterios.
+      </p>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="nosotros" class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-primary-600 font-semibold text-sm uppercase tracking-wide">Sobre nosotros</span>
+          <h2 class="text-3xl font-bold text-gray-900 mt-2 mb-6">Especialistas en equipos biomédicos</h2>
+          <p class="text-gray-600 mb-4 leading-relaxed">
+            En <strong>BioMed Equip</strong> nos dedicamos a suministrar equipos médicos de alta calidad a hospitales, clínicas, centros de diagnóstico y profesionales de la salud. Contamos con una amplia gama de monitores, equipos de imagen y dispositivos biomédicos.
+          </p>
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            Nuestro equipo técnico brinda asesoría especializada para que elijas la solución más adecuada a las necesidades de tu institución.
+          </p>
+          <div class="grid grid-cols-2 gap-6">
+            <div>
+              <div class="text-3xl font-bold text-primary-600">500+</div>
+              <div class="text-sm text-gray-500">Equipos entregados</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-primary-600">120+</div>
+              <div class="text-sm text-gray-500">Clientes satisfechos</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-primary-600">15+</div>
+              <div class="text-sm text-gray-500">Años de experiencia</div>
+            </div>
+            <div>
+              <div class="text-3xl font-bold text-primary-600">24/7</div>
+              <div class="text-sm text-gray-500">Soporte técnico</div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
+          <h3 class="text-xl font-bold text-gray-900 mb-6">¿Por qué elegirnos?</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-primary-600 text-sm"></i>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Equipos certificados</span>
+                <p class="text-sm text-gray-500">Cumplimos con normas internacionales de calidad médica</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-primary-600 text-sm"></i>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Asesoría técnica</span>
+                <p class="text-sm text-gray-500">Te ayudamos a elegir el equipo ideal para tu necesidad</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-primary-600 text-sm"></i>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Garantía y servicio</span>
+                <p class="text-sm text-gray-500">Respaldo postventa y mantenimiento disponible</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <i class="fas fa-check text-primary-600 text-sm"></i>
+              </div>
+              <div>
+                <span class="font-semibold text-gray-800">Precios competitivos</span>
+                <p class="text-sm text-gray-500">Cotizaciones claras y sin costos ocultos</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Quote -->
+  <section id="contacto" class="py-16 bg-primary-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Solicita tu cotización</h2>
+          <p class="text-primary-200 mb-8">
+            Completa el formulario y un asesor se pondrá en contacto contigo a la brevedad. También puedes escribirnos directamente.
+          </p>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <div class="text-sm text-primary-300">Teléfono / WhatsApp</div>
+                <div class="font-semibold">+52 55 1234 5678</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-sm text-primary-300">Correo electrónico</div>
+                <div class="font-semibold">ventas@biomequip.com</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 bg-primary-700 rounded-lg flex items-center justify-center">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <div class="text-sm text-primary-300">Ubicación</div>
+                <div class="font-semibold">Ciudad de México, México</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-8 text-gray-800 shadow-xl">
+          <form id="contact-form" onsubmit="handleSubmit(event)">
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Nombre completo *</label>
+                <input type="text" required name="nombre" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Empresa / Institución</label>
+                <input type="text" name="empresa" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+              </div>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4 mb-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico *</label>
+                <input type="email" required name="email" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">Teléfono *</label>
+                <input type="tel" required name="telefono" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+              </div>
+            </div>
+            <div class="mb-4">
+              <label class="block text-sm font-medium text-gray-700 mb-1">Equipo de interés</label>
+              <select name="equipo" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none">
+                <option value="">Selecciona un equipo...</option>
+                <option value="monitores">Monitores de signos vitales</option>
+                <option value="imagen">Equipos de imagen</option>
+                <option value="ecg">Electrocardiógrafos</option>
+                <option value="desfibrilador">Desfibriladores</option>
+                <option value="otro">Otro / Varios</option>
+              </select>
+            </div>
+            <div class="mb-6">
+              <label class="block text-sm font-medium text-gray-700 mb-1">Mensaje / Detalles</label>
+              <textarea name="mensaje" rows="3" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 outline-none" placeholder="Indica modelo, cantidad u otros detalles..."></textarea>
+            </div>
+            <button type="submit" class="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition flex items-center justify-center gap-2">
+              <i class="fas fa-paper-plane"></i>
+              Enviar solicitud de cotización
+            </button>
+          </form>
+          <div id="form-success" class="hidden mt-4 p-4 bg-green-50 text-green-800 rounded-lg text-center">
+            <i class="fas fa-check-circle mr-2"></i>
+            ¡Solicitud enviada! Nos pondremos en contacto pronto.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-4 gap-8 mb-8">
+        <div>
+          <div class="flex items-center gap-2 mb-4">
+            <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+              <i class="fas fa-heartbeat text-white"></i>
+            </div>
+            <span class="text-white font-bold text-lg">BioMed Equip</span>
+          </div>
+          <p class="text-sm leading-relaxed">
+            Especialistas en la comercialización de equipos biomédicos de alta calidad para el sector salud.
+          </p>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Productos</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#productos" class="hover:text-white transition">Monitores</a></li>
+            <li><a href="#productos" class="hover:text-white transition">Equipos de Imagen</a></li>
+            <li><a href="#productos" class="hover:text-white transition">Diagnóstico</a></li>
+            <li><a href="#productos" class="hover:text-white transition">Soporte Vital</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Empresa</h4>
+          <ul class="space-y-2 text-sm">
+            <li><a href="#nosotros" class="hover:text-white transition">Nosotros</a></li>
+            <li><a href="#contacto" class="hover:text-white transition">Contacto</a></li>
+            <li><a href="#" class="hover:text-white transition">Política de privacidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Contacto</h4>
+          <ul class="space-y-2 text-sm">
+            <li><i class="fas fa-phone mr-2"></i> +52 55 1234 5678</li>
+            <li><i class="fas fa-envelope mr-2"></i> ventas@biomequip.com</li>
+            <li><i class="fas fa-map-marker-alt mr-2"></i> Ciudad de México</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 pt-6 text-center text-sm">
+        <p>&copy; 2026 BioMed Equip. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quote Modal -->
+  <div id="quote-modal" class="fixed inset-0 bg-black/50 z-50 hidden items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="text-xl font-bold text-gray-900">Solicitar cotización</h3>
+        <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600">
+          <i class="fas fa-times text-xl"></i>
+        </button>
+      </div>
+      <p class="text-gray-600 mb-4">Estás solicitando cotización de:</p>
+      <p id="modal-product-name" class="font-semibold text-primary-700 mb-6 text-lg"></p>
+      <form onsubmit="handleModalSubmit(event)">
+        <div class="mb-3">
+          <input type="text" required placeholder="Tu nombre *" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500">
+        </div>
+        <div class="mb-3">
+          <input type="email" required placeholder="Correo electrónico *" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500">
+        </div>
+        <div class="mb-3">
+          <input type="tel" required placeholder="Teléfono *" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500">
+        </div>
+        <div class="mb-4">
+          <textarea placeholder="Cantidad u observaciones (opcional)" rows="2" class="w-full px-4 py-2.5 border border-gray-300 rounded-lg outline-none focus:ring-2 focus:ring-primary-500"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-primary-600 text-white py-3 rounded-lg font-semibold hover:bg-primary-700 transition">
+          Enviar solicitud
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Product data
+    const products = [
+      {
+        id: 1,
+        name: "Monitor Multiparamétrico CMS-8000",
+        category: "monitores",
+        price: "Desde $28,500 MXN",
+        description: "Monitor de 5 parámetros: ECG, SpO2, NIBP, RESP y Temperatura. Pantalla TFT de 12.1\".",
+        icon: "fa-desktop",
+        badge: "Popular"
+      },
+      {
+        id: 2,
+        name: "Monitor de Signos Vitales Portátil",
+        category: "monitores",
+        price: "Desde $12,900 MXN",
+        description: "Compacto y ligero. Ideal para ambulancias y consultas. Batería de larga duración.",
+        icon: "fa-heartbeat",
+        badge: null
+      },
+      {
+        id: 3,
+        name: "Ecógrafo Portátil Digital",
+        category: "imagen",
+        price: "Desde $45,000 MXN",
+        description: "Ecógrafo de mano con sonda dual. Ideal para diagnóstico en consultorio y veterinaria.",
+        icon: "fa-x-ray",
+        badge: "Nuevo"
+      },
+      {
+        id: 4,
+        name: "Sistema de Rayos X Digital",
+        category: "imagen",
+        price: "Cotizar",
+        description: "Sistema digital de rayos X con panel detector. Alta resolución y bajo dosis de radiación.",
+        icon: "fa-radiation",
+        badge: null
+      },
+      {
+        id: 5,
+        name: "Electrocardiógrafo 12 Derivaciones",
+        category: "diagnostico",
+        price: "Desde $18,500 MXN",
+        description: "ECG digital de 12 canales. Impresión térmica y almacenamiento en USB.",
+        icon: "fa-wave-square",
+        badge: null
+      },
+      {
+        id: 6,
+        name: "Oxímetro de Pulso de Mesa",
+        category: "diagnostico",
+        price: "Desde $8,900 MXN",
+        description: "Oxímetro profesional con pantalla grande. SpO2 + frecuencia de pulso + NIBP opcional.",
+        icon: "fa-lungs",
+        badge: null
+      },
+      {
+        id: 7,
+        name: "Desfibrilador Externo Automático (DEA)",
+        category: "soporte",
+        price: "Desde $32,000 MXN",
+        description: "DEA semiautomático con guía de voz. Ideal para áreas públicas y clínicas.",
+        icon: "fa-bolt",
+        badge: "Esencial"
+      },
+      {
+        id: 8,
+        name: "Ventilador Mecánico Portátil",
+        category: "soporte",
+        price: "Cotizar",
+        description: "Ventilador de transporte con modos controlados y de soporte. Batería interna.",
+        icon: "fa-wind",
+        badge: null
+      },
+      {
+        id: 9,
+        name: "Electrobisturí de Alta Frecuencia",
+        category: "quirurgico",
+        price: "Desde $22,000 MXN",
+        description: "Unidad de electrocirugía monopolar y bipolar. Ideal para quirófanos y consultorios.",
+        icon: "fa-syringe",
+        badge: null
+      },
+      {
+        id: 10,
+        name: "Monitor Fetal Doppler",
+        category: "diagnostico",
+        price: "Desde $4,500 MXN",
+        description: "Detector de latidos fetales con pantalla LCD y altavoz. Uso obstétrico.",
+        icon: "fa-baby",
+        badge: null
+      },
+      {
+        id: 11,
+        name: "Camilla de Traslado Hidráulica",
+        category: "quirurgico",
+        price: "Desde $35,000 MXN",
+        description: "Camilla hidráulica con ruedas y barandales. Capacidad hasta 200 kg.",
+        icon: "fa-bed",
+        badge: null
+      },
+      {
+        id: 12,
+        name: "Monitor Multiparamétrico de Alto Rendimiento",
+        category: "monitores",
+        price: "Desde $48,000 MXN",
+        description: "Monitor avanzado con análisis de arritmias, pantalla táctil y conectividad HL7.",
+        icon: "fa-desktop",
+        badge: "Premium"
+      }
+    ];
+
+    let currentCategory = 'todos';
+    let currentSearch = '';
+
+    function renderProducts() {
+      const grid = document.getElementById('products-grid');
+      const noResults = document.getElementById('no-results');
+      
+      let filtered = products.filter(p => {
+        const matchCategory = currentCategory === 'todos' || p.category === currentCategory;
+        const matchSearch = p.name.toLowerCase().includes(currentSearch) || 
+                           p.description.toLowerCase().includes(currentSearch);
+        return matchCategory && matchSearch;
+      });
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noResults.classList.remove('hidden');
+        return;
+      }
+
+      noResults.classList.add('hidden');
+      grid.innerHTML = filtered.map(p => `
+        <div class="product-card bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-lg">
+          <div class="bg-gradient-to-br from-primary-50 to-primary-100 h-40 flex items-center justify-center relative">
+            <i class="fas ${p.icon} text-5xl text-primary-400"></i>
+            ${p.badge ? `<span class="absolute top-3 right-3 bg-primary-600 text-white text-xs font-semibold px-2.5 py-1 rounded-full">${p.badge}</span>` : ''}
+          </div>
+          <div class="p-5">
+            <span class="text-xs font-medium text-primary-600 uppercase tracking-wide">${getCategoryName(p.category)}</span>
+            <h3 class="font-bold text-gray-900 mt-1 mb-2 line-clamp-2">${p.name}</h3>
+            <p class="text-sm text-gray-500 mb-4 line-clamp-2">${p.description}</p>
+            <div class="flex items-center justify-between">
+              <span class="font-semibold text-primary-700">${p.price}</span>
+              <button onclick="openModal('${p.name.replace(/'/g, "\\'")}')" 
+                      class="bg-primary-600 text-white text-sm px-4 py-2 rounded-lg hover:bg-primary-700 transition font-medium">
+                Cotizar
+              </button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function getCategoryName(cat) {
+      const names = {
+        monitores: 'Monitores',
+        imagen: 'Equipos de Imagen',
+        diagnostico: 'Diagnóstico',
+        soporte: 'Soporte Vital',
+        quirurgico: 'Quirúrgico'
+      };
+      return names[cat] || cat;
+    }
+
+    function filterProducts(category) {
+      currentCategory = category;
+      renderProducts();
+      // Scroll to products
+      document.getElementById('productos').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function searchProducts() {
+      currentSearch = document.getElementById('search-input').value.toLowerCase();
+      renderProducts();
+    }
+
+    function openModal(productName) {
+      document.getElementById('modal-product-name').textContent = productName;
+      const modal = document.getElementById('quote-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('quote-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('form-success').classList.remove('hidden');
+      e.target.reset();
+      setTimeout(() => {
+        document.getElementById('form-success').classList.add('hidden');
+      }, 5000);
+    }
+
+    function handleModalSubmit(e) {
+      e.preventDefault();
+      closeModal();
+      alert('¡Solicitud enviada correctamente! Nos pondremos en contacto contigo pronto.');
+    }
+
+    // Mobile menu
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+
+    // Close modal on outside click
+    document.getElementById('quote-modal').addEventListener('click', (e) => {
+      if (e.target.id === 'quote-modal') closeModal();
+    });
+
+    // Initial render
+    renderProducts();
+  </script>
+</body>
+</html>
